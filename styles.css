@@ -28,7 +28,7 @@ header{
     display: flex;
     width: 85%;
     justify-content: center;
-    height: 3rem;
+    height: 4rem;
     margin: auto;
 
 }
@@ -55,16 +55,32 @@ header{
     list-style: none;
 }
 .nav-link > a{
+    position: relative; /*zeby pasek u spodu podlapal rodzica*/
     display: flex;
     text-decoration: none;
     color: var(--font);
     font-size: 17px;
     transition: .3s;
-    padding: 0 12px;
+    /*padding: 0 0px;*/  /*pasek u spodu lapal niewlasciwa szerokosc*/
+    margin: 12px
 }
 .nav-link > a:hover{
     color: yellow;
-    transform: scale(1.03);
+
+}
+.nav-link > a::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    height: 3px;
+    background: white;
+    opacity: 0;
+    transition: .2s;
+}
+.nav-link > a:hover::after{
+    width: 100%;
+    opacity: .8;
 }
 .links ul li a i{
     margin-left: 8px;
