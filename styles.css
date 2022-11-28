@@ -229,6 +229,7 @@ section{
     background: rgba(0,0,0,0.6);
     width: 800px /*70%*/;
     margin: auto;
+    z-index: -1;
 }
 
 .image-container div{
