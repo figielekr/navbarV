@@ -114,5 +114,15 @@
             </div>
         </section>
     </main>
+<script>
+    const mobileNav = document.querySelector('.menu');
+    const burgerButton = document.querySelector('.hamburger-menu');
+
+    burgerButton.addEventListener('click', function(){
+        mobileNav.classList.toggle('active');
+        burgerButton.classList.toggle('active');
+    })
+
+</script>
 </body>
 </html>

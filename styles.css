@@ -202,6 +202,7 @@ header{
     border-radius: 3px;
     background: white;
     position: relative;
+    transition: .3s;
 }
 .hamburger-menu div::after,
 .hamburger-menu div::before{
@@ -209,8 +210,9 @@ header{
     width: inherit;
     height: inherit;
     border-radius: inherit;
-    background: inherit;
+    background: white;
     position: absolute;
+    transition: inherit;
 }
 .hamburger-menu div::before{
     transform: translateY(8px);
@@ -260,6 +262,15 @@ section{
     .hamburger-container{
         display: flex;
     }
+    .hamburger-menu.active div{
+        background: transparent;
+    }
+    .hamburger-menu.active div:before{
+        transform: rotate(-45deg);
+    }
+    .hamburger-menu.active div:after{
+        transform: translateY(8px) rotate(45deg);
+    }
     .menu{
         position: fixed;
         height: 90%;
@@ -270,6 +281,12 @@ section{
         justify-content: space-between;
         overflow-x: hidden;
         overflow-y: auto;
+        transform: translate(100%);
+        transition: .3s;
+    }
+
+    .menu.active{
+        transform: translate(0%);
     }
     .links{
         align-items: flex-start;
@@ -308,13 +325,15 @@ section{
     }
     .submenu-link{
         margin-left: 10px;
-
     }
     .arrow{
         display: none;
     }
     .login{
         align-items: flex-end;
+        margin-bottom: 0;
+    }
+    .login:hover{
     }
     .log{
         outline: none;
