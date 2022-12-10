@@ -21,17 +21,17 @@
             <div class="menu">
                 <div class="links">
                     <ul>
-                        <li class="nav-link"><a href="#">Products<i class="fa-solid fa-caret-up"></i></a>
+                        <li class="nav-link"><a class="dropdown-test" href="#">Products<i class="fa-solid fa-caret-up"></i></a>
                             <div class="submenu">
                                 <ul>
                                     <li class="submenu-link"><a href="#">Link 1</a></li>
                                     <li class="submenu-link"><a href="#">Link 2</a></li>
-                                    <li class="submenu-link"><a href="#">Link 3<i class="fa-solid fa-caret-up"></i></a>
+                                    <li class="submenu-link"><a class="deep-link" href="#">Link 3<i class="fa-solid fa-caret-up"></i></a>
                                         <div class="submenu second">
                                             <ul>
 
                                                 <li class="submenu-link"><a href="#">Link 1</a></li>
-                                                <li class="submenu-link"><a href="#">Link 2<i class="fa-solid fa-caret-up"></i></a>
+                                                <li class="submenu-link"><a class="deep-link" href="#">Link 2<i class="fa-solid fa-caret-up"></i></a>
                                                     <div class="submenu second">
                                                         <ul>
                                                             <li class="submenu-link"><a href="#">Link 1</a></li>
@@ -54,16 +54,16 @@
                             </div>
                         </li>
                         <li class="nav-link"><a href="#">About us</a></li>
-                        <li class="nav-link"><a href="#">Info<i class="fa-solid fa-caret-up"></i></a>
+                        <li class="nav-link"><a class="dropdown-test" href="#">Info<i class="fa-solid fa-caret-up"></i></a>
                             <div class="submenu">
                                 <ul>
                                     <li class="submenu-link"><a href="#">Link 1</a></li>
                                     <li class="submenu-link"><a href="#">Link 2</a></li>
-                                    <li class="submenu-link"><a href="#">Link 3<i class="fa-solid fa-caret-up"></i></a>
+                                    <li class="submenu-link"><a class="deep-link" href="#">Link 3<i class="fa-solid fa-caret-up"></i></a>
                                         <div class="submenu second">
                                             <ul>
                                                 <li class="submenu-link"><a href="#">Link 1</a></li>
-                                                <li class="submenu-link"><a href="#">Link 2<i class="fa-solid fa-caret-up"></i></a>
+                                                <li class="submenu-link"><a class="deep-link" href="#">Link 2<i class="fa-solid fa-caret-up"></i></a>
                                                     <div class="submenu second">
                                                         <ul>
                                                             <li class="submenu-link"><a href="#">Link 1</a></li>
@@ -115,14 +115,7 @@
             </div>
         </section>
     </main>
-<script>
-    const mobileNav = document.querySelector('.menu');
-    const burgerButton = document.querySelector('.hamburger-menu');
-
-    burgerButton.addEventListener('click', function(){
-        mobileNav.classList.toggle('active');
-        burgerButton.classList.toggle('active');
-    })
+<script src="js.js">
 
 </script>
 </body>
