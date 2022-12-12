@@ -20,6 +20,7 @@ header{
     /*font-family: 'Lato', sans-serif;*/
     background: linear-gradient(0deg, transparent, #333333);
     opacity: 0.8;
+    z-index: 1;
 }
 .container{
     display: flex;
@@ -114,6 +115,7 @@ header{
 .login > a:hover{
     background-color: white;
     color: #333333;
+    transition-delay: 0s;
 }
 .submenu{
     transform: scale(0,0);
@@ -124,9 +126,11 @@ header{
     z-index: 1;
     opacity: 0;
     transition: .3s;
+    transition-delay: .3s;
 }
 .submenu.second{
     transform-origin: left;
+    transition-delay: .3s;
 }
 .submenu ul{
     list-style: none;
@@ -179,8 +183,9 @@ header{
 }
 .links li:hover > .submenu{
     transform: scale(1,1);
-    opacity: .85;
+    opacity: .90;
     pointer-events: auto;
+    transition-delay: 0s;
 }
 .hamburger-container{
     display: none;
@@ -227,14 +232,30 @@ section{
     box-shadow: 2px 4px 13px #2a2a2a;
     top: 0;
     display: block;
-    height: calc(90vh - 3rem);
+    height: calc(100vh - 3rem);
     background: rgba(0,0,0,0.6);
-    width: 800px /*70%*/;
-    margin: auto;
-    z-index: -1;
+    width: 100% /*70%*/;
+    padding: 30px 80px;
+    margin: 0 auto;
+    overflow: auto;
+    z-index: 0;
+}
+.meme-container{
+    width: 70%;
+    min-height: 600px;
+    background: linear-gradient(grey, darkgray);
+    margin: 0 auto 35px;
+}
+.titleClass{
+    display: flex;
+    font-family: Montserrat sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    padding: 15px 0 0  40px;
+
 }
 
-.image-container div{
+/*.image-container div{
     display: flex;
     background: #706D6DFF url("1.jpg") -10px -220px;
     background-blend-mode: multiply;
@@ -253,9 +274,7 @@ section{
     background: url("2.jpg");
     box-shadow: 15px 15px 25px #2a2a2a;
 
-}
-
-/*lh*/
+}*/
 @media(max-width: 1100px){
     .menu{
         position: absolute;

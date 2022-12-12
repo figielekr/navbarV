@@ -19,13 +19,6 @@
     const deep_link = document.querySelectorAll(".deep-link");
     const submenu_link = document.querySelectorAll(".submenu-link");
 
-    /*[].forEach.call(dropdown_test, el => {
-    el.addEventListener('click',click_dropdown , false)
-});
-
-    function click_dropdown() {
-    if(this === dropdown_test[0]) console.log(dropdown_test.length)
-}*/
     [].forEach.call(deep_link, el => {      //dla kazdego elementu dropdown_test
     el.addEventListener('click', () => {
         el.closest('.submenu-link').classList.toggle('active');
@@ -45,9 +38,49 @@
     })
 
 });
-    function click_dropdown() {
 
-}
+    //tworzenie elementow
+    //strona do hejtowania
+    divCreate('meme-id', 'meme-container', 'box-center');
+    divCreate('meme-id', 'meme-container', 'box-center');
+    divCreate('meme-id', 'meme-container', 'box-center');
+    divCreate('meme-id', 'meme-container', 'box-center');
+    divCreate('meme-id', 'meme-container', 'box-center');
+    divCreate('meme-id', 'meme-container', 'box-center');
+
+    function divCreate (newID, newClass, existingID){
+        const appendContainer = document.getElementById(existingID);
+        const newElement = document.createElement('div');
+        newElement.classList.add(newClass);
+        newElement.setAttribute('id', newID);
+        appendContainer.appendChild(newElement);
+    }
+    /*const appendContainer = document.getElementById('box-center');
+    const newElement = document.createElement('div');
+    newElement.classList.add('meme-container');
+    newElement.setAttribute('id', 'meme-id');
+    appendContainer.appendChild(newElement);*/
+
+    spanCreate('titleID', 'titleClass', 'meme-id', "Generator memów");
+
+    function spanCreate (newID, newClass, existingID, textInsideSpan){
+        const appendTitle = document.getElementById(existingID)
+        const titleElement = document.createElement('span');
+        titleElement.setAttribute('id', newID);
+        titleElement.classList.add(newClass);
+        titleElement.innerText = textInsideSpan;
+        appendTitle.appendChild(titleElement);
+    }
+    /*const appendTitle = document.getElementById('meme-id')
+    const titleElement = document.createElement('span');
+    titleElement.setAttribute('id', 'titleID');
+    titleElement.classList.add('titleClass');
+    titleElement.innerText = "Generator memów";
+    appendTitle.appendChild(titleElement);*/
+
+
+
+
 
     /*    nav_link[1].classList.toggle("active");*/
 /*    console.log(nav_link.length);*/
