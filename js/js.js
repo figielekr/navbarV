@@ -41,12 +41,12 @@
 
     //tworzenie elementow
     //strona do hejtowania
+/*    divCreate('meme-id', 'meme-container', 'box-center');
     divCreate('meme-id', 'meme-container', 'box-center');
     divCreate('meme-id', 'meme-container', 'box-center');
     divCreate('meme-id', 'meme-container', 'box-center');
     divCreate('meme-id', 'meme-container', 'box-center');
-    divCreate('meme-id', 'meme-container', 'box-center');
-    divCreate('meme-id', 'meme-container', 'box-center');
+    divCreate('meme-id', 'meme-container', 'box-center');*/
 
     function divCreate (newID, newClass, existingID){
         const appendContainer = document.getElementById(existingID);
@@ -61,7 +61,7 @@
     newElement.setAttribute('id', 'meme-id');
     appendContainer.appendChild(newElement);*/
 
-    spanCreate('titleID', 'titleClass', 'meme-id', "Generator memów");
+    //spanCreate('titleID', 'titleClass', 'meme-id', "Generator memów");
 
     function spanCreate (newID, newClass, existingID, textInsideSpan){
         const appendTitle = document.getElementById(existingID)

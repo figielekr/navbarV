@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 body {
-    background: #333 url("background.jpg") no-repeat top center/cover;
+    background: #333 url("../img/background.jpg") no-repeat top center/cover;
     background-blend-mode: multiply;
     top: 0;
     height: 100vh;
@@ -28,7 +28,6 @@ header{
     justify-content: center;
     height: 4rem;
     margin: auto;
-
 }
 .logo-container{
     display: flex;
@@ -240,20 +239,7 @@ section{
     overflow: auto;
     z-index: 0;
 }
-.meme-container{
-    width: 70%;
-    min-height: 600px;
-    background: linear-gradient(grey, darkgray);
-    margin: 0 auto 35px;
-}
-.titleClass{
-    display: flex;
-    font-family: Montserrat sans-serif;
-    font-weight: 600;
-    font-size: 25px;
-    padding: 15px 0 0  40px;
 
-}
 
 /*.image-container div{
     display: flex;

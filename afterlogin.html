@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/afterlogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/28be9a9148.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>navbarV</title>
+</head>
+<body>
+
+
+
+
+    <div class="after-login">
+        <div class="request">
+            <div class="photo-part">
+                <img class="face non-gender active" src="img/non-gender.jpg">
+                <img class="face man" src="img/man.jpg">
+                <img class="face woman" src="img/woman.jpg">
+                <div class="non-gender"></div>
+                <div class="man"></div>
+                <div class="woman"></div>
+            </div>
+            <div class="request-part">
+                <form action="includes/uploadFile.php" method='POST' enctype="multipart/form-data" onchange="getSelectedValue()">
+                    <span class='fieldName'>Sex</span><br>
+                    <select name ="sex" id="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option  value="none" selected="selected">Please choose</option>
+                    </select>
+                    <input type="file" name="file"/>
+                    <input type="submit" name="submit">
+                </form>
+            </div>
+        </div>
+        <a href="index.html">Return to main page.</a>
+    </div>
+
+<script>
+    const non_gender = document.querySelector('.non-gender');
+    const man = document.querySelector('.man');
+    const woman = document.querySelector('.woman');
+
+    function getSelectedValue(){
+        const selectedValue = document.getElementById('gender').value;
+        //console.log(selectedValue);
+        non_gender.classList.remove('active');
+        console.log(non_gender);
+        if (selectedValue==='male'){
+            non_gender.classList.remove('active');
+            woman.classList.remove('active');
+            man.classList.add('active');
+        }
+        else if (selectedValue==='female'){
+            woman.classList.add('active');
+            non_gender.classList.remove('active');
+            man.classList.remove('active');
+        }
+        else if (selectedValue==='none'){
+            non_gender.classList.add('active');
+            woman.classList.remove('active');
+            man.classList.remove('active');
+        }
+    }
+</script>
+
+</body>
+</html>

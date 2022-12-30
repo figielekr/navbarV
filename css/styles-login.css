@@ -7,17 +7,22 @@ body{
 }
 .register{
     display: flex;
-    background: rgba(200,200,200,.4);
+    background: #787676FF;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     max-width: 350px;
-    height: 230px;
+    height: 200px;
     flex-basis: 25%;
     padding: 15px 25px;
 }
-
+::-webkit-input-placeholder {
+    color:transparent;  /*chrome*/
+}
+::-moz-placeholder {  /* Firefox 19+ */
+    color:transparent;
+}
 input{
     position: relative;
     display: flex;
@@ -29,11 +34,15 @@ input{
     outline: none;
     transition: .3s;
     width: 173px;
+    color: #ab9f9f;
+    padding-left: 7px;
 }
 .button-create{
     display: flex;
     justify-content: center;
-
+}
+button{
+    cursor: pointer;
 }
 .button-create button{
     background: #ab9f9f;
@@ -46,12 +55,13 @@ input{
 }
 label{
     position: absolute;
-    font-family: Poopins sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 15px;
     margin: 5px;
     color: #ab9f9f;
-    transform: translate(7px , -11px);
+    transform: translate(7px , -13px);
     transition: .3s;
+    pointer-events: none;
 }
 /*.e-mail{
     position: absolute;
@@ -60,11 +70,25 @@ label{
 
 input:focus~label,
 input:valid~label{
-    transform: translate(7px, -35px);
-    opacity: 0;
-    font-size: 15px;
-    background: transparent;
+    transform: translate(14px, -20px);
+    opacity: 1;
+    font-size: 9px;
+    background: #787676FF;
+    border: 2px solid rgba(255,255,255,.3);
+    border-top: transparent;
+    border-bottom: transparent;
+    padding: 0 5px;
 }
+input:focus,
+input:valid{
+    background-color: #787676FF;
+    /*background-color: white;*/
+    color: #ab9f9f;
+}
+/*.e-mail.active{
+    position: absolute;
+    transform: translate(-65px, -11px);
+}*/
 a{
     margin-top: -10px;
 }
