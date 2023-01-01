@@ -1,5 +1,4 @@
-
-body{
+.sign_up_body{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +22,9 @@ body{
 ::-moz-placeholder {  /* Firefox 19+ */
     color:transparent;
 }
+.return{
+    font-size: 15px;
+}
 input{
     position: relative;
     display: flex;
@@ -40,19 +42,19 @@ input{
 .button-create{
     display: flex;
     justify-content: center;
-}
-button{
-    cursor: pointer;
+    margin-bottom: 15px;
 }
 .button-create button{
     background: #787676FF;
     outline: none;
-    border: 2px solid rgba(255,255,255,.3);
+    border: 3px solid rgba(255,255,255,.3);
     border-radius: 5px;
     width: 173px;
     height: 24px;
     margin-top: 10px;
     transition: .3s;
+    cursor: pointer;
+    font-weight: bold;
 }
 label{
     position: absolute;
@@ -104,5 +106,13 @@ button:hover{
 .button-create button:active{
     background-color: #4d4d4d;
     border-color: #4d4d4d;
+}
+p{
+
+    display: flex;
+    margin-top: -15px;
+    font-family: 'Montserrat', sans-serif;
+    color: deeppink;
+    font-size: 20px;
 }
 

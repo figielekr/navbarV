@@ -16,7 +16,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>navbarV</title>
     </head>
-    <body>
+    <body class="sign_up_body">
     <!--<p class="welcome">Register</p>-->
         <form action="includes/signup.inc.php" method="post" autocomplete="off">
             <div class="register">
@@ -33,7 +33,12 @@
                         <label class="e-mail">e-mail</label>
                     </div>
                     <div class="button-create"> <button name="submit">Create account!</button></div>
-                <a href="index.html">Return to main page.</a>
+                <!--<a href="index.html">Return to main page.</a>-->
+                <div class="errors">
+                    <?php
+                    include_once 'includes/errors.php';
+                    ?>
+                </div>
             </div>
         </form>
 <!--    <script>-->
