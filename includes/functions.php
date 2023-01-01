@@ -59,5 +59,34 @@ function createUser($conn, $username, $password, $mail, $create_date){
 }
 
 function loginUser($conn, $name, $password){
+    if(usernameTaken($conn, $name)){
+        //login
+        $user_data = usernameTaken($conn, $name);
+        $pwd_db = $user_data['pwd'];
+        if($password === $pwd_db){
+            session_start();
+            $_SESSION['userID'] = $user_data['ID'];
+            $_SESSION['username'] = $user_data['username'];
+            header("location: ../index.html?loginsuccesful");
+        } else {
+            header("location: ../login.html?error=invalidpassword");
+            exit();
+        }
+    } elseif (emailTaken($conn, $name)) {
+        //login
+        $user_data = usernameTaken($conn, $name);
+        $pwd_db = $user_data['pwd'];
+        if($password === $pwd_db){
+            echo 'true';
+        } else {
+            header("location: ../login.html?error=invalidpassword");
+            exit();
+        }
+    } else {
+        header("location: ../login.html?error=invalidusername");
+        exit();
+    }
+}
+function loginPwdVerify($conn, $name, $password){
 
 }

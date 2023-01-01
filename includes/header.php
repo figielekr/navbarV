@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -89,9 +93,21 @@
                         <li class="nav-link"><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="login logout">
+                <!--<div class="login logout">
                     <a href="./login.html" class="log log-in">Log in</a>
                     <a href="./signup.html" class="log sign-in">Sign up</a>
+                </div>-->
+
+                <div class="login logout">
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                    echo '<a href="./profile.html" class="log log-in">Profile </a>';
+                    echo '<a href="./includes/logout.inc.php" class="log sign-in">Logout </a>';
+                    } else {
+                    echo '<a href="./login.html" class="log log-in">Log in</a>';
+                    echo '<a href="./signup.html" class="log sign-in">Sign up</a>';
+                    }
+                    ?>
                 </div>
 
             </div>

@@ -35,6 +35,25 @@ function usernameTaken($conn, $username){
 }
 
 
+if (isset($_SESSION['username'])) {
+    echo '<a href="./profile.php" class="log log-in">Profile </a>';
+    echo '<a href="./logout.inc.php" class="log sign-in">Logout </a>';
+} else {
+    echo '<a href="../login.html" class="log log-in">Log in</a>';
+    echo '<a href="../signup.html" class="log sign-in">Sign up</a>';
+}
+
+
+if (isset($_SESSION['username'])) {
+    echo '<a href="./profile.php" class="log log-in">Profile </a>';
+    echo '<a href="./logout.inc.php" class="log sign-in">Logout </a>';
+} else {
+    echo '<a href="../login.html" class="log log-in">Log in</a>';
+    echo '<a href="../signup.html" class="log sign-in">Sign up</a>';
+}
+
+
+
 
 
 
