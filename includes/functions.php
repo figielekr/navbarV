@@ -63,6 +63,7 @@ function createUser($conn, $username, $password, $mail, $sex, $create_date){
 function loginUser($conn, $name, $password){
     if(usernameTaken($conn, $name)){
         //login
+        lastTimeLogin($conn, $name);
         $user_data = usernameTaken($conn, $name);
         $pwd_db = $user_data['pwd'];
         if($password === $pwd_db){
@@ -78,6 +79,7 @@ function loginUser($conn, $name, $password){
         }*/
     } elseif (emailTaken($conn, $name)) {
         //login
+        lastTimeLogin($conn, $name);
         $user_data = emailTaken($conn, $name);
         $pwd_db = $user_data['pwd'];
         if($password === $pwd_db){
@@ -98,4 +100,16 @@ function loginUser($conn, $name, $password){
 }
 function loginPwdVerify($conn, $name, $password){
 
+}
+function lastTimeLogin($conn, $name){
+    $sql = "UPDATE users SET last_visit = ? WHERE username = ?;";
+    $last_time = date("Y-m-d" ." ". "H:i:s");
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+        header("location: ../signup.html?error=stmtfailedLastTimeLogin");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "ss", $last_time, $name);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
 }
