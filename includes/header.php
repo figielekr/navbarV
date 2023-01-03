@@ -5,7 +5,9 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/afterlogin.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/profile.css">
     <link rel="stylesheet" href="./css/article.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +23,7 @@
     <header>
         <div class="container">
             <div class="logo-container">
-                <h3 class="logo">Logo<span>Brand</span></h3>
+                <a href="./index.html"><h3 class="logo">Logo<span>Brand</span></h3></a>
             </div>
             <div class="menu">
                 <div class="links">
@@ -99,13 +101,16 @@
                 </div>-->
 
                 <div class="login logout">
+
                     <?php
                     if (isset($_SESSION['username'])) {
-                    echo '<a href="./profile.html" class="log log-in">Profile </a>';
-                    echo '<a href="./includes/logout.inc.php" class="log sign-in">Logout </a>';
-                    } else {
-                    echo '<a href="./login.html" class="log log-in">Log in</a>';
-                    echo '<a href="./signup.html" class="log sign-in">Sign up</a>';
+                        echo '<img class="avatar" src="./uploads/non-gender.jpg">';
+                        echo '<a href="./profile.html" class="log log-in">Profile </a>';
+                        echo '<a href="./includes/logout.inc.php" class="log sign-in">Logout </a>';
+                        } else {
+                        echo '<a href="./login.html" class="log log-in">Log in</a>';
+                        echo '<a href="./signup.html" class="log sign-in">Sign up</a>';
+
                     }
                     ?>
                 </div>

@@ -1,0 +1,13 @@
+.profile{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 70%;
+}
+.profile_nav{
+    display: grid;
+    grid-template-rows: ;
+    width: 80%;
+    height: 3rem;
+    background-color: red;
+}

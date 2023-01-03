@@ -41,17 +41,43 @@ input{
     display: flex;
     justify-content: center;
 }
-button{
-    cursor: pointer;
-}
 .button-create button{
-    background: #ab9f9f;
+    background: #787676FF;
     outline: none;
-    border: 2px solid rgba(255,255,255,.3);
+    border: 3px solid rgba(255,255,255,.3);
     border-radius: 5px;
     width: 173px;
     height: 24px;
-    margin-top: 10px;
+    margin: 10px;
+    transition: .3s;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ab9f9f;
+}
+button:hover{
+    color: white;
+
+}
+.button-create button:hover{
+    background-color: #5b5b5b;
+    border-color: #5b5b5b;
+}
+.button-create button:active{
+    background-color: #4d4d4d;
+    border-color: #4d4d4d;
+}
+p{
+    display: flex;
+    justify-content: center;
+    margin-top: -15px;
+    font-family: 'Montserrat', sans-serif;
+    color: blue;
+    font-size: 18px;
+}
+.return{
+    display: flex;
+    margin-top: -5px;
+    font-family: 'Montserrat', sans-serif;
 }
 label{
     position: absolute;

@@ -7,6 +7,8 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         $mail = $_POST['mail'];
+        $sex = $_POST['sex'];
+
         $create_date = date("Y-m-d" ." ". "H:i:s");
 
         if (invalidUsername( $username)){
@@ -21,7 +23,7 @@
             header("location: ../signup.html?error=emailTaken");
             exit();
         }
-        createUser($conn, $username, $password, $mail, $create_date);
+        createUser($conn, $username, $password, $mail, $sex ,$create_date);
     } else {
         header("location ../signup.html?errorcreatingaccount");
     }

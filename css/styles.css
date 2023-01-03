@@ -97,10 +97,16 @@ header{
 .logo span{
     font-weight: bold;
 }
+
+.avatar{
+    aspect-ratio: 1/1;
+    width: 38px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
 .login{
     align-items: center;
     justify-content: center;
-
 }
 .login > a{
     text-decoration: none;

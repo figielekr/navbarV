@@ -28,7 +28,11 @@
                 <label>Password</label>
             </div>
             <div class="button-create"> <button name="submit_login">Submit</button></div>
-            <a href="index.html">Return to main page.</a>
+            <div class="errors">
+                <?php
+                    include_once 'includes/errors.php';
+                    ?>
+            </div>
         </div>
     </form>
 </body>
