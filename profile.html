@@ -8,18 +8,34 @@
         <ul>
             <li><a href="#">Profil</a> </li>
             <li><a href="#">Tematy</a> </li>
-            <li><a href="#">Komentarze</a> </li>
+            <li><a class="last" href="#">Komentarze</a> </li>
         </ul>
     </div>
     <div class="profile_info">
         <div class="profile_info_avatar">
             <div class="profile_avatar">
-                <img src="uploads/non-gender.jpg" alt="">
+                <img src="uploads/<?php echo $_SESSION['photo_path']; ?>" alt="">
             </div>
         </div>
         <div class="profile_info_data">
+            <p></p>
+            <p></p>
             <p>Nazwa użytkownika</p>
-            <p>sgsgdsgs</p>
+            <b><p><?php echo $_SESSION['username']; ?></p></b>
+            <p>Ostatnia wizyta:</p>
+            <b><p><?php echo $_SESSION['last_visit']; ?></p></b>
+            <p>E-mail</p>
+            <b><p><?php echo $_SESSION['email']; ?></p></b>            <p>Komentarzy</p>
+            <p></p>
+            <p>Płeć</p>
+            <b><p><?php echo $_SESSION['sex']; ?></p></b>
+            <p>Data dołączenia</p>
+            <b><p><?php echo $_SESSION['create_date']; ?></p></b>
+            <p>Zmien zdjecie</p>
+            <form action="includes/uploadFile.php" method='POST' enctype="multipart/form-data">
+                <input type="file" name="file"/>
+                <input type="submit" name="submit" value=" Dalej ">
+            </form>
         </div>
     </div>
 

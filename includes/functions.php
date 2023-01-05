@@ -68,9 +68,13 @@ function loginUser($conn, $name, $password){
         $pwd_db = $user_data['pwd'];
         if($password === $pwd_db){
             session_start();
-            $_SESSION['userID'] = $user_data['id'];
+            $_SESSION['id'] = $user_data['id'];
             $_SESSION['username'] = $user_data['username'];
-            $_SESSION['avatar_path'] = $user_data['photo_path'];
+            $_SESSION['photo_path'] = $user_data['photo_path'];
+            $_SESSION['last_visit'] = $user_data['last_visit'];
+            $_SESSION['create_date'] = $user_data['create_date'];
+            $_SESSION['sex'] = $user_data['sex'];
+            $_SESSION['email'] = $user_data['email'];
 
             header("location: ../index.html?loginsuccesful");
         } /*else {
@@ -84,9 +88,14 @@ function loginUser($conn, $name, $password){
         $pwd_db = $user_data['pwd'];
         if($password === $pwd_db){
             session_start();
-            $_SESSION['userID'] = $user_data['id'];
+            $_SESSION['id'] = $user_data['id'];
             $_SESSION['username'] = $user_data['username'];
-            $_SESSION['avatar_path'] = $user_data['photo_path'];
+            $_SESSION['photo_path'] = $user_data['photo_path'];
+            $_SESSION['last_visit'] = $user_data['last_visit'];
+            $_SESSION['create_date'] = $user_data['create_date'];
+            $_SESSION['sex'] = $user_data['sex'];
+            $_SESSION['email'] = $user_data['email'];
+
 
             header("location: ../index.html?loginsuccesful");
         } else {
@@ -113,3 +122,9 @@ function lastTimeLogin($conn, $name){
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 }
+/*function sessionStart($user_data){
+    session_start();
+    $_SESSION['userID'] = $user_data['id'];
+    $_SESSION['username'] = $user_data['username'];
+    $_SESSION['avatar_path'] = $user_data['photo_path'];
+}*/

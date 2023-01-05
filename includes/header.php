@@ -104,7 +104,7 @@
 
                     <?php
                     if (isset($_SESSION['username'])) {
-                        echo '<img class="avatar" src="./uploads/non-gender.jpg">';
+                        echo '<img class="avatar" src="./uploads/' .  $_SESSION['photo_path'] .'">';
                         echo '<a href="./profile.html" class="log log-in">Profile </a>';
                         echo '<a href="./includes/logout.inc.php" class="log sign-in">Logout </a>';
                         } else {

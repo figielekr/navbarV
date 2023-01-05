@@ -103,6 +103,7 @@ header{
     width: 38px;
     border-radius: 50%;
     margin: 0 5px;
+    border: 2px solid white;
 }
 .login{
     align-items: center;
