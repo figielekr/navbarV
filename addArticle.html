@@ -1,0 +1,22 @@
+<?php
+    include_once 'includes/header.php';
+?>
+<main class="add_Article">
+  <section>
+      <?php
+      if(isset($_SESSION['username'])){
+      include_once 'includes/addArticle.php';
+      } else {
+      echo '<div class="error_window">';
+      echo '<p>Dostęp do tej części wymaga zalogowania.</p>';
+      echo '</div>';
+      }
+        ?>
+  </section>
+</main>
+
+
+</script>
+</body>
+
+</html>

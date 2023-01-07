@@ -1,73 +1,38 @@
 <?php
+    include_once 'includes/dbLoginSandbox.php';
     include_once 'includes/header.php';
+    $sql = "SELECT * FROM articles ORDER BY articleID DESC;";
+    $result = mysqli_query($conn, $sql);
+
+
 ?>
     <main>
-        <section>
+        <section class="main_section">
             &nbsp;
             <!--<div style='width:0;height:0'>&nbsp;</div>-->
              <!--wstawione, zeby sekcja sie nie przesuwala-->
             <p></p>
             <div class="overlay" id="box-center">
-                <div class="article-container" id="meme-id">
-                    <div class="article_header">
-                        <div class="user_avatar">
-                            <img src="uploads/non-gender.jpg" alt="avatar">
-                        </div>
-                        <div>
-                            <span id="titleID" class="titleClass">Mem numer 1</span>
-                        </div>
-                        <div class="article_info">
-                            <span>Autor • Dzisiaj 11:41 [<a href="#">zgłoś duplikat]</a></span>
-                        </div>
-                        <div class="votes">
-                            <span class="vote_count">137</span>
-                            <a href="#"><img src="img/toppng.com-youtube-like-icon-200x160.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="image">
-                        <img src="img/h2r.jpg" alt="">
-                    </div>
-                    <div class="footer">
-                        <div class="star">
-                            <a href="#" class="add_favourite"><i class="fa-solid fa-star"></i></a>
-                        </div>
-                        <div class="social">
-                            <a href="#" class="add_favourite"><i class="fa-brands fa-facebook"></i></a>
-                            <a href="#" class="add_favourite"><i class="fa-brands fa-facebook-messenger"></i></a>
-                            <a href="#" class="add_favourite"><i class="fas fa-link copy-link"></i></a>
-                        </div>
-                        <div class="votes">
-                            <span class="vote_count">137</span>
-                            <a href="#"><img src="img/toppng.com-youtube-like-icon-200x160.png" alt=""></a>
-                        </div>
-                        <div class="comments_icon">
-                            <a href="#" class="comments_icon"><i class="fa-solid fa-comments"></i></a>
-                            <a href="#" class="comments_icon"><i class="fas fa-angle-double-up"></i></a>
-                        </div>
-                    </div>
-                    <div class="comment_section">
-                        <div class="comment_container">
-                            <div style='width:0;height:0'>&nbsp;</div>
-                            <div class="comment_header">
-                                <a href="#">Autor</a> <span> • Dzisiaj 11:41</span>
-                                <div class="comment_votes">
-                                    <span>4 <a href="#"><i class="fa-solid fa-thumbs-up"></i></a></span>
-                                </div>
-                            </div>
-                            <div class="comment">
-                                <p>Dlaczego szlifierka nie ma założonej osłony? Można komuś zrobić przez to krzywdę!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+                <?php
+                    include 'includes/article.php';
+                    include 'includes/article.php';
+                    include 'includes/article.php';
+                    include 'includes/article.php';
+                    include 'includes/article.php';
+                ?>
             </div>
+
         </section>
     </main>
+   <!-- <script>
+        const obj = <?php echo json_encode($row); ?>;
+    </script>-->
     <script src="js/js.js">
 
+        /*console.log(<?php echo json_encode($row); ?>);
+        console.log(<?php echo json_encode($row1); ?>);*/
+
     </script>
-</body>
+
 
 </html>

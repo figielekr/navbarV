@@ -128,3 +128,7 @@ function lastTimeLogin($conn, $name){
     $_SESSION['username'] = $user_data['username'];
     $_SESSION['avatar_path'] = $user_data['photo_path'];
 }*/
+
+function addComment($conn, $comment_content, $articleID){
+
+}

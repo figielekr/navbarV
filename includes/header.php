@@ -5,10 +5,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/afterlogin.css">
+    <link rel="stylesheet" href="./css/afterlogin.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/profile.css">
     <link rel="stylesheet" href="./css/article.css">
+    <link rel="stylesheet" href="./css/addArticle.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -92,7 +94,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="nav-link"><a href="#">Contact</a></li>
+                        <li class="nav-link"><a href="../phpmyadmin/index.php">PHP MyAdmin</a></li>
                     </ul>
                 </div>
                 <!--<div class="login logout">

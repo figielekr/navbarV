@@ -9,9 +9,6 @@
     mobileNav.classList.toggle('active');
     burgerButton.classList.toggle('active');
 })
-    /*dropdown_test.addEventListener('click', function (){
-    pcSmallNavLink.classList.toggle('active');
-})*/
 
 
     const nav_link = document.querySelectorAll(".nav-link");
@@ -39,14 +36,13 @@
 
 });
 
-    //tworzenie elementow
-    //strona do hejtowania
-/*    divCreate('meme-id', 'meme-container', 'box-center');
-    divCreate('meme-id', 'meme-container', 'box-center');
-    divCreate('meme-id', 'meme-container', 'box-center');
-    divCreate('meme-id', 'meme-container', 'box-center');
-    divCreate('meme-id', 'meme-container', 'box-center');
-    divCreate('meme-id', 'meme-container', 'box-center');*/
+
+/*    divCreate('meme-id', 'article-container', 'box-center');
+    divCreate('meme-id', 'article-container', 'box-center');
+    divCreate('meme-id', 'article-container', 'box-center');*/
+
+
+
 
     function divCreate (newID, newClass, existingID){
         const appendContainer = document.getElementById(existingID);
@@ -55,13 +51,13 @@
         newElement.setAttribute('id', newID);
         appendContainer.appendChild(newElement);
     }
-    /*const appendContainer = document.getElementById('box-center');
-    const newElement = document.createElement('div');
-    newElement.classList.add('meme-container');
-    newElement.setAttribute('id', 'meme-id');
-    appendContainer.appendChild(newElement);*/
-
-    //spanCreate('titleID', 'titleClass', 'meme-id', "Generator memów");
+    function imgCreate (imgsrc, existingID, newClass){
+        const createImg = document.createElement('img');
+        createImg.src = './uploads/' + imgsrc;
+        createImg.classList.add(newClass);
+        const parentDiv = document.getElementById(existingID);
+        parentDiv.appendChild(createImg);
+    }
 
     function spanCreate (newID, newClass, existingID, textInsideSpan){
         const appendTitle = document.getElementById(existingID)
@@ -71,40 +67,17 @@
         titleElement.innerText = textInsideSpan;
         appendTitle.appendChild(titleElement);
     }
-    /*const appendTitle = document.getElementById('meme-id')
-    const titleElement = document.createElement('span');
-    titleElement.setAttribute('id', 'titleID');
-    titleElement.classList.add('titleClass');
-    titleElement.innerText = "Generator memów";
-    appendTitle.appendChild(titleElement);*/
 
 
+/*    divCreate('meme-id' + obj['articleID'], 'article-container', 'box-center');
+    divCreate('article_header'+ obj['articleID'], 'article_header', 'meme-id' + obj['articleID']);
+    divCreate('header_avatar' + obj['articleID'], 'user_avatar', 'article_header'+ obj['articleID']);
+    imgCreate(obj['avatar_article_path'], 'header_avatar'+ obj['articleID'], 'avatar_img');
+    divCreate('titleID_span' + obj['articleID'], 'header_avatar', 'article_header'+ obj['articleID']);
+    spanCreate('titleID', 'titleClass',  'titleID_span' + obj['articleID'], obj['title']);
+    divCreate('article_info' + obj['articleID'], 'article_info', 'article_header'+ obj['articleID']);
+    spanCreate('article_info_span', 'something',  'article_info' + obj['articleID'], obj['author'] + ' • '+ obj['add_date']);
+    divCreate('votes'+ obj['articleID'], 'votes', 'article_header' + obj['articleID']);
+    spanCreate('votes_span'+ obj['articleID'], 'vote_count', 'votes'+ obj['articleID'], obj['likes'] - obj['dislikes'])*/
 
-
-
-    /*    nav_link[1].classList.toggle("active");*/
-/*    console.log(nav_link.length);*/
-
-
-    /*    [].forEach.call(nav_link, el => {
-    el.addEventListener('click', btnClick, false)
-});*/
-
-
-
-
-
-    /*   function click_dropdown() {
-    [].forEach.call(dropdown_test, el => {
-        if (el !== this.nav_link) el.classList.remove("active");
-    })
-    this.classList.toggle('active');
-}*/
-
-    /*    function btnClick() {
-    [].forEach.call(nav_link, el => {
-        if (el !== this) el.classList.remove("active");
-    });
-    this.classList.toggle('active');
-}*/
 
